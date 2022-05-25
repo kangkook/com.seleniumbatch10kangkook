@@ -1,0 +1,15 @@
+name: Suite
+configFailurePolicy: skip
+tests:
+  - name: SmokeTest
+  classes:
+    - SeleniumDay9K.OpenBrowser
+    - SeleniumDay9K.testPriorityInTestNG
+    - SeleniumDay9K.NewTest
+
+  - name: Regression
+  classes:
+    - SeleniumDay9K.OpenBrowser
+    - SeleniumDay9K.testPriorityInTestNG
+    - SeleniumDay9K.NewTest
+

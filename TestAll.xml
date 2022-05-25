@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="SeleniumDay10.MultiBrowserTesting"/>
+      <class name="SeleniumDay5.autoSuggestionBox"/>
+      <class name="SeleniumDay3.junitTesting"/>
+      <class name="SeleniumDay5.staticDropDownK"/>
+      <class name="SeleniumDay4.waitTests"/>
+      <class name="SeleniumDay10.ClassA"/>
+      <class name="SeleniumDay5.staticDropDown"/>
+      <class name="SeleniumDay10.ClassB"/>
+      <class name="SeleniumDay4.homework"/>
+      <class name="SeleniumDay7.windowHandlesTesting"/>
+      <class name="SeleniumDay5.AsserLearning"/>
+      <class name="SeleniumDay9.OpenBrowser"/>
+      <class name="SeleniumDay7.windowHandlesTesting2"/>
+      <class name="SeleniumDay4.checkBoxesTest2"/>
+      <class name="SeleniumDay3.testGoogleSite"/>
+      <class name="SeleniumDay9K.GroupingTestK"/>
+      <class name="SeleniumDay6.listOfElement_FindElements"/>
+      <class name="SeleniumDay4.radioButtonTestingK"/>
+      <class name="SeleniumDay10.reportingLog"/>
+      <class name="PracticeAutomation51TestCases.HomePage18._1HomePageWithThreeSlidersOnly2"/>
+      <class name="SeleniumDay9K.OpenBrowser"/>
+      <class name="SeleniumDay4.checkBoxesText2Another"/>
+      <class name="PracticeAutomation51TestCases.HomePage18.Test1"/>
+      <class name="SeleniumDay6.alertBoxTestingTola"/>
+      <class name="SeleniumDay9.GroupingTest"/>
+      <class name="SeleniumDay8.TestingDriverClass"/>
+      <class name="Utilities.Driver"/>
+      <class name="SeleniumDay9K.testPriorityInTestNG"/>
+      <class name="SeleniumDay4.radioButtonTestingGood"/>
+      <class name="SeleniumDay7.dragAndDropTestingFrame"/>
+      <class name="SeleniumDay3.testCase1"/>
+      <class name="SeleniumDay9K.NewTest"/>
+      <class name="SeleniumDay5.dynamicDropDown"/>
+      <class name="SeleniumDay8.TestPropertiesClass"/>
+      <class name="SeleniumDay7.hoverOverTesting"/>
+      <class name="SeleniumDay9.testPriorityInTestNG"/>
+      <class name="SaturdayReview05072022.textboxTest4"/>
+      <class name="SeleniumDay3.testAmazonSite"/>
+      <class name="SaturdayReview05072022.textboxTest3"/>
+      <class name="SeleniumDay9.NewTest"/>
+      <class name="SaturdayReview05072022.textboxTest5"/>
+      <class name="SeleniumDay10.NewTest"/>
+      <class name="SaturdayReview05072022.textboxTest2"/>
+      <class name="SaturdayReview05072022.textboxTest"/>
+      <class name="SeleniumDay6.alertBoxTesting"/>
+      <class name="SeleniumDay6.SoftAssertionTest"/>
+      <class name="PracticeAutomation51TestCases.HomePage18._1HomePageWithThreeSlidersOnly"/>
+      <class name="SeleniumDay5.dynamicDropDownDate"/>
+      <class name="SeleniumDay10.groupDependencyTest"/>
+      <class name="SeleniumDay7.dragAndDropTesting"/>
+      <class name="SeleniumDay4.checkboxesTesting"/>
+      <class name="SeleniumDay7.dragAndDropTestingjqueryui"/>
+      <class name="SeleniumDay10.dependentTests"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
