@@ -1,6 +1,8 @@
 package SeleniumDay_11;
 
-import org.junit.Assert;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -9,26 +11,40 @@ import Utilities.ListenersTestNG;
 @Listeners(ListenersTestNG.class)
 public class testListeners {
 
-	@Test //success Test
+	@Test // success Test
 	public void test1() {
-		Assert.assertTrue(true);
+
+		AssertJUnit.assertTrue(true);
 	}
-	
-	@Test //failed
+
+	@Test // failed
 	public void test2() {
-		Assert.assertTrue(false);
+		AssertJUnit.assertTrue(false);
 	}
-	
-	
-	@Test //failed
+
+	@Test // failed
 	public void test3() {
-		Assert.assertTrue(false);
+		AssertJUnit.assertTrue(false);
 	}
-	
-	
-	@Test //success Test
+
+	@Test // success Test
 	public void test4() {
+		AssertJUnit.assertTrue(true);
+	}
+
+	@Test
+	public void firstMethod() {
 		Assert.assertTrue(true);
 	}
-	
+
+	@Test
+	public void secondMethod() {
+		Assert.assertTrue(false);
+	}
+
+	@Test(dependsOnMethods = { "firstMethod" })
+	public void thirdMethod() {
+		Assert.assertTrue(true);
+	}
+
 }

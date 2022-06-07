@@ -2,20 +2,21 @@ package SeleniumDay_10;
 
 import org.testng.annotations.Test;
 
-public class ClassA {
+class ClassA {
+	
 	
 	
   @Test
   public void f() {
 	  
-	  System.out.println("Hello World Class A f");
+	  System.out.println("Hello World, this is ClassA talking with method f");
   }
   
   
   @Test
   public void d() {
 	  
-	  System.out.println("Hello World Class A d");
+	  System.out.println("Hello World, this is ClassA talking with method d");
   }
   
   

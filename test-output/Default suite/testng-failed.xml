@@ -3,12 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SeleniumDay10.MultiBrowserTesting">
+      <class name="seleniumDay12_13.loginTestCases">
         <methods>
-          <include name="login"/>
-          <include name="BeforeClass"/>
+          <include name="loginWithValidCredentials_Standard"/>
+          <include name="setUp"/>
+          <include name="loginWithValidCredentials_problemUser"/>
+          <include name="loginWithValidCredentials_performanceGlitchUser"/>
+          <include name="loginWithValidCredentials_lockoutUser"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- SeleniumDay10.MultiBrowserTesting -->
+      </class> <!-- seleniumDay12_13.loginTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

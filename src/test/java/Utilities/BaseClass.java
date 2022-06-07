@@ -7,12 +7,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
-import org.testng.annotations.AfterMethod;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 
+	// DRIVER CLASS
 	public static WebDriver driver;
 
 	public static WebDriver getDriver() {
@@ -20,70 +20,56 @@ public class BaseClass {
 		if (driver == null) {
 
 			switch (BaseClass.getProperty("browser")) {
-//			switch ("chrome") {
 
 			case "firefox":
-
 				WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
-				break;
-			case "Chrome":
 
+				break;
+			case "chrome":
 				WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();
+
 				break;
-
 			case "safari":
-
 				WebDriverManager.safaridriver().setup();
 				driver = new SafariDriver();
+
 				break;
-
 			case "headless":
-
-				// headless Driver
+				// code
 				break;
 
 			}
-
-		//	driver.get("https://www.techcircleschool.com");
 			
-			driver.get("http://practice.automationtesting.in/");
-
 		}
 
 		return driver;
 	}
-	
-	
-	//close/quit browser
-	@AfterMethod
+
+	// close/quit browser
 	public static void tearDown() {
-		
-		if(driver != null) {
+		if (driver != null) {
 			driver.close();
-			
+			// driver.quit();
 			driver = null;
-			
 		}
-		
 	}
 	
-	// configReaderClass
-	private static Properties configfile;
 	
-	// example.
-	// public static WebDriver driver;
+	
+	// configReaderClass
+	private static Properties configFile;
 
 	static {
 
 		try {
 			String filePath = "src/test/resources/propertiesFolder/config.properties";
-			
+
 			FileInputStream input = new FileInputStream(filePath);
 
-			configfile = new Properties();
-			configfile.load(input);
+			configFile = new Properties();
+			configFile.load(input);
 
 			input.close();
 
@@ -94,46 +80,50 @@ public class BaseClass {
 	}
 
 	public static String getProperty(String keyName) {
-
-		return configfile.getProperty(keyName);
+		return configFile.getProperty(keyName);
 	}
 	
-	/////////////////////////////
+	
+	
 	
 	// configReaderClass
-	private static Properties userDataConfig;
-	
-	// example.
-	// public static WebDriver driver;
+		private static Properties userDataConfig;
 
-	static {
+		static {
 
-		try {
-			String filePath = "src/test/resources/propertiesFolder/userData.properties";
-			
-			FileInputStream input = new FileInputStream(filePath);
+			try {
+				String filePath = "src/test/resources/propertiesFolder/userData.properties";
 
-			userDataConfig = new Properties();
-			userDataConfig.load(input);
+				FileInputStream input = new FileInputStream(filePath);
 
-			input.close();
+				userDataConfig = new Properties();
+				userDataConfig.load(input);
 
-		} catch (Exception e) {
-			e.printStackTrace();
+				input.close();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
 		}
 
-	}
+		public static String getUserDataProperty(String keyName) {
+			return userDataConfig.getProperty(keyName);
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
-	public static String getUserProperty(String keyName) {
-
-		return userDataConfig.getProperty(keyName);
-	}
-	
-	
-	
-	
-	
-	
-	
-	
 }

@@ -4,48 +4,42 @@ import org.testng.annotations.Test;
 import org.testng.annotations.DataProvider;
 
 public class NewTest {
-  
-	
-	
-	
+
 	@Test(dataProvider = "dp")
-  public void f(Integer n, String s) {
-	  
-		System.out.println("Printing these items: --" + n + "=" + s);
-		
-  }
+	public void f(Integer n, String s) {
 
-  @DataProvider(name="dp")
-  public Object[][] dp() {
-    return new Object[][] {
-      new Object[] { 1, "a" },
-      new Object[] { 3, "b" },
-      new Object[] { 4, "b" },
-      new Object[] { 5, "b" },
-      new Object[] { 6, "b" },
-      new Object[] { 7, "b" },
-      new Object[] { 8, "b" },
-      new Object[] { 9, "b" },
-      new Object[] { 10, "b" },
-      new Object[] { 11, "b" },
-      new Object[] { 12, "b" },
-      new Object[] { 13, "b" },
-      
-    };
-	  
-	  
-	  
-  }
-  
-  
-  ///
-  @DataProvider(name = "data-provider")
-  public Object[][] dpMethod() {
-      return new Object[][] { { "First-Value" }, { "Second-Value" }, { "Third-Value" } };
-  }
+		System.out.println("Printing these items:  -- " + n + "=" + s);
+	}
 
-  @Test(dataProvider = "data-provider")
-  public void myTest(String val) {
-      System.out.println("Passed Parameter Is : " + val);
-  }
+	@DataProvider(name = "dp")
+	public Object[][] dp() {
+		return new Object[][] { new Object[] { 1, "a" }, new Object[] { 22, "asdfb" }, new Object[] { 2, "basf" },
+				new Object[] { 33, "asdfb" }, new Object[] { 2, "bd" }, new Object[] { 2, "basf" },
+				new Object[] { 2, "b" }, new Object[] { 2, "asdfb" }, new Object[] { 95, "b" },
+				new Object[] { 2, "b" }, };
+
+	}
+
+	@DataProvider(name = "dp2")
+	public Object[][] anotherDataProviderMethod() {
+		return new Object[][] { new Object[] { 1, "a" }, new Object[] { 22, "asdfb" }, new Object[] { 2, "basf" },
+				new Object[] { 33, "asdfb" }, new Object[] { 2, "bd" }, new Object[] { 2, "basf" },
+				new Object[] { 2, "b" }, new Object[] { 2, "asdfb" }, new Object[] { 95, "b" },
+				new Object[] { 2, "b" }, };
+
+	}
+
+	
+	
+	///
+	@DataProvider(name = "data-provider")
+	public Object[][] dpMethod() {
+		return new Object[][] { { "ValidUsername","ValidPassword" }, { "ValidUsername","inValidPassword" }, { "ValidUsername","InvalidPassword" } };
+	}
+
+	@Test(dataProvider = "data-provider")
+	public void myTest(String val, String val2) {
+		System.out.println("Passed Parameter Is : " + val + "------ " +val2);
+	}
+
 }
